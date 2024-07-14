@@ -1,1 +1,56 @@
-<h1>Hello!!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFI Hardware - Australian Aftermarket Fuel Injection</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .bg {
+            background-image: url('/api/placeholder/1920/1080');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #VG_OVERLAY_CONTAINER {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 500px;
+            height: 500px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div id="VG_OVERLAY_CONTAINER">
+        <!-- Here is where Voiceglow renders the widget. -->
+    </div>
+
+    <script>
+        (function() {
+            window.VG_CONFIG = {
+                ID: "k7nngxw2m9ylu5mr",
+                region: 'na', // 'eu' or 'na' corresponding to Europe and North America
+                render: 'full-width', // popup or full-width
+                stylesheets: [
+                    // Base Voiceglow CSS
+                    "https://storage.googleapis.com/voiceglow-cdn/vg_live_build/styles.css",
+                    // Add your custom css stylesheets, Can also add relative URL ('/public/your-file.css)
+                ],
+                // userID: 'USER_ID', // If you want to use your own user_id
+                // autostart: true, // Whether to autostart the chatbot with the proactive message
+            }
+            var VG_SCRIPT = document.createElement("script");
+            VG_SCRIPT.src = "https://storage.googleapis.com/voiceglow-cdn/vg_live_build/vg_bundle.js";
+            document.body.appendChild(VG_SCRIPT);
+        })()
+    </script>
+</body>
+</html>
